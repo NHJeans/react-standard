@@ -71,11 +71,11 @@ function App() {
         />
         <button type="submit">사용자 추가</button>
       </form>
-      <ul>
+      <ul className="user-list">
         {users.map((user) => {
           return (
             <li key={user.id}>
-              이름: {user.name}, 나이: {user.age}
+              이름: {user.name}, 나이: {user.age} {""}
               <button
                 onClick={() => {
                   removeUser(user.id);
