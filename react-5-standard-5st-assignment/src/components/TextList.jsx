@@ -1,8 +1,8 @@
-import { useContext } from "react";
-import { TodoContext } from "../context/TodoContextProvider";
+import { useSelector } from "react-redux";
 
 export default function TextList() {
-  const { texts } = useContext(TodoContext);
+  const texts = useSelector((state) => state.texts);
+
   return (
     <ul>
       {texts.map((text, index) => (
